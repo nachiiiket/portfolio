@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Project portfolio of Nachiket Yawalkar">
+    <title>Projects | Nachiket Yawalkar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="l-header">
+        <nav class="nav container">
+            <a href="index.html#home" class="nav__logo">NY</a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="index.html#home" class="nav__link">Home</a></li>
+                    <li><a href="index.html#about" class="nav__link">About</a></li>
+                    <li><a href="index.html#experience" class="nav__link">Experience</a></li>
+                    <li><a href="index.html#skills" class="nav__link">Skills</a></li>
+                    <li><a href="projects.html" class="nav__link active">Projects Page</a></li>
+                    <li><a href="index.html#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav__actions">
+                <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme">
+                    <i class="bx bx-moon"></i>
+                </button>
+                <button class="nav__toggle icon-btn" id="nav-toggle" aria-label="Toggle menu">
+                    <i class="bx bx-menu"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h1 class="section-title">Projects</h1>
+                <p class="section-subtitle">Detailed project showcase with stack, screenshots, and repository/live links.</p>
+
+                <div class="project-list-page">
+                    <article class="project-entry" id="llm-industrial-analytics">
+                        <h2>LLM Industrial Analytics Assistant</h2>
+                        <p>
+                            A natural-language analytics workflow for industrial IoT. Users ask plain English questions and receive generated statistical insights
+                            with time-range reasoning and aggregated metrics.
+                        </p>
+                        <div class="stack-chips">
+                            <span>Python</span>
+                            <span>FastAPI</span>
+                            <span>LLM</span>
+                            <span>RAG</span>
+                            <span>Industrial IoT</span>
+                        </div>
+                        <div class="project-shot">
+                            Screenshot placeholder - replace with your dashboard screenshot.
+                        </div>
+                        <div class="project-links">
+                            <a class="button button--ghost" href="https://github.com/nachiiiket" target="_blank" rel="noopener noreferrer">GitHub</a>
+                            <a class="button button--ghost" href="#" aria-disabled="true">Live Link (Add when deployed)</a>
+                        </div>
+                    </article>
+
+                    <article class="project-entry" id="enterprise-rag-chatbot">
+                        <h2>Enterprise RAG Knowledge Chatbot</h2>
+                        <p>
+                            Document-grounded chatbot with semantic retrieval across 500+ files, designed for customer support and navigation of internal knowledge.
+                        </p>
+                        <div class="stack-chips">
+                            <span>LangChain</span>
+                            <span>OpenAI</span>
+                            <span>FAISS</span>
+                            <span>Docker</span>
+                            <span>Kubernetes</span>
+                        </div>
+                        <div class="project-shot">
+                            Screenshot placeholder - replace with chatbot conversation screenshot.
+                        </div>
+                        <div class="project-links">
+                            <a class="button button--ghost" href="https://github.com/nachiiiket" target="_blank" rel="noopener noreferrer">GitHub</a>
+                            <a class="button button--ghost" href="#" aria-disabled="true">Live Link (Add when deployed)</a>
+                        </div>
+                    </article>
+
+                    <article class="project-entry" id="gpu-simulation-intelligence">
+                        <h2>GPU-Optimized Simulation Intelligence</h2>
+                        <p>
+                            AI acceleration workflow integrated with material simulations to reduce run time from minutes to seconds and speed up engineering decisions.
+                        </p>
+                        <div class="stack-chips">
+                            <span>Python</span>
+                            <span>AI/ML</span>
+                            <span>Simulation</span>
+                            <span>Optimization</span>
+                            <span>High Performance Computing</span>
+                        </div>
+                        <div class="project-shot">
+                            Screenshot placeholder - replace with simulation results screenshot.
+                        </div>
+                        <div class="project-links">
+                            <a class="button button--ghost" href="https://github.com/nachiiiket" target="_blank" rel="noopener noreferrer">GitHub</a>
+                            <a class="button button--ghost" href="#" aria-disabled="true">Live Link (Add when deployed)</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <button id="scroll-top" class="scroll-top" aria-label="Scroll to top">
+        <i class="bx bx-up-arrow-alt"></i>
+    </button>
+
+    <footer class="footer">
+        <div class="container footer__content">
+            <p class="footer__title">Nachiket Yawalkar</p>
+            <p class="footer__copy">© <span id="year"></span> All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="script.js"></script>
+</body>
+</html>

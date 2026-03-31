@@ -41,6 +41,10 @@ body {
   color: var(--text);
 }
 
+body.menu-open {
+  overflow: hidden;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -284,6 +288,61 @@ ul {
   padding: 1rem 1.1rem;
 }
 
+.project-card h3 a {
+  color: var(--text);
+}
+
+.project-card h3 a:hover {
+  color: var(--primary);
+}
+
+.project-list-page {
+  display: grid;
+  gap: 1rem;
+}
+
+.project-entry {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+  padding: 1rem;
+}
+
+.project-shot {
+  margin: 0.8rem 0;
+  min-height: 220px;
+  border: 1px dashed var(--border);
+  border-radius: 0.85rem;
+  background: linear-gradient(145deg, var(--surface-2), var(--surface));
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  text-align: center;
+  padding: 0.8rem;
+}
+
+.stack-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 0.75rem 0;
+}
+
+.stack-chips span {
+  padding: 0.42rem 0.72rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface-2);
+  font-size: 0.86rem;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
 .tick-list li {
   margin-bottom: 0.55rem;
   color: var(--muted);
@@ -381,6 +440,10 @@ ul {
   overflow-wrap: anywhere;
 }
 
+.contact-text {
+  word-break: break-word;
+}
+
 .contact__form {
   padding: 1rem;
 }
@@ -462,20 +525,21 @@ body.enable-reveal .reveal.is-visible {
   .nav__menu {
     position: fixed;
     top: var(--header-height);
-    right: -100%;
+    right: 0;
     width: min(88%, 320px);
     height: calc(100vh - var(--header-height));
     background: var(--surface);
     border-left: 1px solid var(--border);
     padding: 1rem;
-    transition: right 0.3s ease;
+    transition: transform 0.3s ease;
     overflow-y: auto;
     z-index: 120;
     pointer-events: none;
+    transform: translateX(100%);
   }
 
   .nav__menu.show {
-    right: 0;
+    transform: translateX(0);
     pointer-events: auto;
   }
 
@@ -507,6 +571,7 @@ body.enable-reveal .reveal.is-visible {
 
   .contact-card {
     align-items: flex-start;
+    width: 100%;
   }
 
 }

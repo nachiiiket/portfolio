@@ -2,7 +2,19 @@ const showMenu = (toggleId, navId) => {
   const toggle = document.getElementById(toggleId);
   const nav = document.getElementById(navId);
   if (toggle && nav) {
-    toggle.addEventListener("click", () => nav.classList.toggle("show"));
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("show");
+      document.body.classList.toggle("menu-open", nav.classList.contains("show"));
+    });
+
+    document.addEventListener("click", (event) => {
+      const clickedInsideNav = nav.contains(event.target);
+      const clickedToggle = toggle.contains(event.target);
+      if (!clickedInsideNav && !clickedToggle) {
+        nav.classList.remove("show");
+        document.body.classList.remove("menu-open");
+      }
+    });
   }
 };
 
@@ -21,7 +33,10 @@ const tabPanels = document.querySelectorAll(".tab-panel");
 
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
-    if (navMenu) navMenu.classList.remove("show");
+    if (navMenu) {
+      navMenu.classList.remove("show");
+      document.body.classList.remove("menu-open");
+    }
   });
 });
 
