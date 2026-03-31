@@ -16,6 +16,8 @@ const themeToggle = document.getElementById("theme-toggle");
 const yearEl = document.getElementById("year");
 const contactForm = document.getElementById("contact-form");
 const formStatus = document.getElementById("form-status");
+const tabButtons = document.querySelectorAll(".tab-btn");
+const tabPanels = document.querySelectorAll(".tab-panel");
 
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
@@ -97,18 +99,23 @@ if (contactForm) {
 }
 
 const revealEls = document.querySelectorAll(".reveal");
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-      }
-    });
-  },
-  { threshold: 0.1 }
-);
+if ("IntersectionObserver" in window) {
+  document.body.classList.add("enable-reveal");
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
 
-revealEls.forEach((el) => revealObserver.observe(el));
+  revealEls.forEach((el) => revealObserver.observe(el));
+} else {
+  revealEls.forEach((el) => el.classList.add("is-visible"));
+}
 
 if (typeof ScrollReveal !== "undefined") {
   const sr = ScrollReveal({
@@ -119,3 +126,39 @@ if (typeof ScrollReveal !== "undefined") {
   });
   sr.reveal(".section .container > *", { interval: 80 });
 }
+
+function activateTab(targetId) {
+  tabButtons.forEach((button) => {
+    const isCurrent = button.dataset.tabTarget === targetId;
+    button.classList.toggle("active", isCurrent);
+    button.setAttribute("aria-selected", String(isCurrent));
+  });
+
+  tabPanels.forEach((panel) => {
+    panel.classList.toggle("active", panel.id === targetId);
+  });
+}
+
+tabButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    activateTab(button.dataset.tabTarget);
+  });
+});
+
+function syncTabWithHash() {
+  const hash = window.location.hash.replace("#", "");
+  const hasMatchingPanel = Array.from(tabPanels).some((panel) => panel.id === hash);
+  if (hasMatchingPanel) {
+    activateTab(hash);
+    const pagesSection = document.getElementById("pages");
+    if (pagesSection) {
+      pagesSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }
+}
+
+window.addEventListener("hashchange", syncTabWithHash);
+syncTabWithHash();
+
+setActiveNavLink();
+toggleScrollTop();

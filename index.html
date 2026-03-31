@@ -21,8 +21,7 @@
                     <li><a href="#about" class="nav__link">About</a></li>
                     <li><a href="#experience" class="nav__link">Experience</a></li>
                     <li><a href="#skills" class="nav__link">Skills</a></li>
-                    <li><a href="#projects" class="nav__link">Projects</a></li>
-                    <li><a href="#certifications" class="nav__link">Certifications</a></li>
+                    <li><a href="#pages" class="nav__link">Portfolio Pages</a></li>
                     <li><a href="#contact" class="nav__link">Contact</a></li>
                 </ul>
             </div>
@@ -49,7 +48,7 @@
                     </p>
                     <div class="home__cta">
                         <a href="#contact" class="button">Get in Touch</a>
-                        <a href="assets/Nachiket_Resume.pdf" class="button button--ghost" target="_blank" rel="noopener noreferrer">View Resume</a>
+                        <a href="#resume-page" class="button button--ghost">View Resume</a>
                     </div>
                     <div class="socials">
                         <a href="https://www.linkedin.com/in/nachiiiket" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
@@ -144,35 +143,47 @@
             </div>
         </section>
 
-        <section class="section section--muted" id="projects">
+        <section class="section section--muted" id="pages">
             <div class="container reveal">
-                <h2 class="section-title">Featured Work</h2>
-                <div class="projects">
-                    <article class="project-card">
-                        <h3>LLM Industrial Analytics Assistant</h3>
-                        <p>Natural language to sensor analytics pipeline with intent extraction, time-range reasoning, and automated statistical insight generation.</p>
-                    </article>
-                    <article class="project-card">
-                        <h3>Enterprise RAG Knowledge Chatbot</h3>
-                        <p>Context-aware support assistant using advanced chunking, embeddings, FAISS retrieval, and OpenAI LLMs for high relevance responses.</p>
-                    </article>
-                    <article class="project-card">
-                        <h3>GPU-Optimized Simulation Intelligence</h3>
-                        <p>Integrated AI acceleration into industrial simulation workflows, drastically reducing turn-around time for engineering decision-making.</p>
-                    </article>
+                <h2 class="section-title">Portfolio Pages</h2>
+                <p class="section-subtitle">Switch between sections like separate pages without leaving this website.</p>
+                <div class="page-tabs" role="tablist" aria-label="Portfolio Pages">
+                    <button class="tab-btn active" data-tab-target="projects-page" role="tab" aria-selected="true">Projects</button>
+                    <button class="tab-btn" data-tab-target="certifications-page" role="tab" aria-selected="false">Certifications</button>
+                    <button class="tab-btn" data-tab-target="resume-page" role="tab" aria-selected="false">Resume</button>
                 </div>
-            </div>
-        </section>
 
-        <section class="section" id="certifications">
-            <div class="container reveal">
-                <h2 class="section-title">Certifications</h2>
-                <div class="chips">
-                    <span>Learning Kubernetes</span>
-                    <span>Learning Docker</span>
-                    <span>JavaScript Algorithms and Data Structures</span>
-                    <span>E-Commerce Level 1 Participation</span>
-                    <span>Solana Blockchain Development Program</span>
+                <div id="projects-page" class="tab-panel active" role="tabpanel">
+                    <div class="projects">
+                        <article class="project-card">
+                            <h3>LLM Industrial Analytics Assistant</h3>
+                            <p>Natural language to sensor analytics pipeline with intent extraction, time-range reasoning, and automated statistical insight generation.</p>
+                        </article>
+                        <article class="project-card">
+                            <h3>Enterprise RAG Knowledge Chatbot</h3>
+                            <p>Context-aware support assistant using advanced chunking, embeddings, FAISS retrieval, and OpenAI LLMs for high relevance responses.</p>
+                        </article>
+                        <article class="project-card">
+                            <h3>GPU-Optimized Simulation Intelligence</h3>
+                            <p>Integrated AI acceleration into industrial simulation workflows, drastically reducing turn-around time for engineering decision-making.</p>
+                        </article>
+                    </div>
+                </div>
+
+                <div id="certifications-page" class="tab-panel" role="tabpanel">
+                    <div class="chips">
+                        <span>Learning Kubernetes</span>
+                        <span>Learning Docker</span>
+                        <span>JavaScript Algorithms and Data Structures</span>
+                        <span>E-Commerce Level 1 Participation</span>
+                        <span>Solana Blockchain Development Program</span>
+                    </div>
+                </div>
+
+                <div id="resume-page" class="tab-panel" role="tabpanel">
+                    <div class="resume-wrap">
+                        <iframe src="../Profile.pdf" title="Nachiket Resume"></iframe>
+                    </div>
                 </div>
             </div>
         </section>
