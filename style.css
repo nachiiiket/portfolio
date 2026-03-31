@@ -368,19 +368,6 @@ ul {
   display: block;
 }
 
-.resume-wrap {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 1rem;
-  box-shadow: var(--shadow);
-  overflow: hidden;
-}
-
-.resume-wrap iframe {
-  width: 100%;
-  min-height: 70vh;
-  border: 0;
-}
 
 .contact-grid {
   margin-bottom: 1rem;
@@ -522,7 +509,4 @@ body.enable-reveal .reveal.is-visible {
     align-items: flex-start;
   }
 
-  .resume-wrap iframe {
-    min-height: 82vh;
-  }
 }
