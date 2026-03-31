@@ -1,206 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="description" content="Portfolio of Nachiket Yawalkar - AI/ML Engineer specializing in LLMs, RAG, time-series forecasting, and MLOps.">
+    <title>Nachiket Yawalkar | AI/ML Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
-    <!-- =====BOX ICONS===== -->
-    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-
-    <title>Portfolio website complete</title>
 </head>
-
 <body>
-    <!--===== HEADER =====-->
     <header class="l-header">
-        <nav class="nav bd-grid">
-            <div>
-                <a href="#" class="nav__logo">NY</a>
-            </div>
-
+        <nav class="nav container">
+            <a href="#home" class="nav__logo">NY</a>
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                    <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    <li><a href="#home" class="nav__link active">Home</a></li>
+                    <li><a href="#about" class="nav__link">About</a></li>
+                    <li><a href="#experience" class="nav__link">Experience</a></li>
+                    <li><a href="#skills" class="nav__link">Skills</a></li>
+                    <li><a href="#projects" class="nav__link">Projects</a></li>
+                    <li><a href="#certifications" class="nav__link">Certifications</a></li>
+                    <li><a href="#contact" class="nav__link">Contact</a></li>
                 </ul>
             </div>
-
-            <div class="nav__toggle" id="nav-toggle">
-                <i class='bx bx-menu'></i>
+            <div class="nav__actions">
+                <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme">
+                    <i class="bx bx-moon"></i>
+                </button>
+                <button class="nav__toggle icon-btn" id="nav-toggle" aria-label="Toggle menu">
+                    <i class="bx bx-menu"></i>
+                </button>
             </div>
         </nav>
     </header>
 
-    <main class="l-main">
-        <!--===== HOME =====-->
-        <section class="home bd-grid" id="home">
-            <div class="home__data">
-                <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Nachiket</span><br> Web 3.0 Developer
-                </h1>
-
-                <a href="#" class="button">Contact</a>
-            </div>
-
-            <div class="home__social">
-                <a href="https://www.linkedin.com/in/nachiket-yawalkar-426348194"
-                    class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                <a href="" class="home__social-icon"><i class='bx bxl-behance' ></i></a>
-                <a href="https://github.com/nachiiiket" class="home__social-icon"><i class='bx bxl-github' ></i></a>
-            </div>
-
-            <div class="home__img">
-                <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <mask id="mask0" mask-type="alpha">
-                        <path
-                            d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" />
-                    </mask>
-                    <g mask="url(#mask0)">
-                        <!-- <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                            <image class="home__blob-img" x="50" y="60" href="assets/img/perfil.png"/> -->
-                        <img src="assets/4.png">
-                    </g>
-                </svg>
-            </div>
-        </section>
-
-        <!--===== ABOUT =====-->
-        <section class="about section " id="about">
-            <h2 class="section-title">About</h2>
-
-
-            <div style="text-align:center;">
-                <h2 class="about__subtitle">I'am Nachiket</h2>
-                <p class="about__text">Web Developer, Blockchain Ethusiast</p>
-                <p class="about__text" style="color:gray;">Hi I'm Nachiket Yawalkar,
-                    currently pursuing bachelors in engineering from
-                    sant gadge baba university amravati.
-                    Currently I'm exploring web 3.0 and its use cases in real world
-                    additionally I'm having breif
-                    knowledge about working of blockchain, NFTs,
-                    cryptocurency, smart-contracts programming using solidity
+    <main>
+        <section class="home section" id="home">
+            <div class="container home__container reveal">
+                <div class="home__content">
+                    <p class="pill">AI/ML Engineer • Pune, India</p>
+                    <h1>Nachiket Yawalkar</h1>
+                    <p class="home__subtitle">LLM & RAG Systems • Industrial AI • Time-Series Forecasting • MLOps</p>
+                    <p class="home__text">
+                        AI Engineer with 2+ years of experience building scalable AI systems for manufacturing and industrial IoT. I design high-impact solutions spanning GenAI, predictive modeling, and production AI pipelines.
                     </p>
+                    <div class="home__cta">
+                        <a href="#contact" class="button">Get in Touch</a>
+                        <a href="../Profile.pdf" class="button button--ghost" target="_blank" rel="noopener noreferrer">View Resume</a>
+                    </div>
+                    <div class="socials">
+                        <a href="https://www.linkedin.com/in/nachiiiket" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+                        <a href="https://github.com/nachiiiket" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+                        <a href="https://www.kaggle.com/nachiiiket/" target="_blank" rel="noopener noreferrer" aria-label="Kaggle"><i class="bx bx-bar-chart-alt-2"></i></a>
+                    </div>
+                </div>
+                <aside class="home__card reveal">
+                    <div class="avatar">NY</div>
+                    <h3>Core Focus</h3>
+                    <ul>
+                        <li>LLM-powered analytics pipelines</li>
+                        <li>RAG architecture & semantic retrieval</li>
+                        <li>Forecasting and anomaly detection</li>
+                        <li>FastAPI-first AI integrations</li>
+                    </ul>
+                </aside>
             </div>
-
         </section>
 
-        <!--===== SKILLS =====-->
-        <section class="skills section" id="skills">
-            <h2 class="section-title">Skills</h2>
-
-            <div class="skills__container bd-grid">
-                <div>
-                    <h2 class="skills__subtitle">Profesional Skills</h2>
-                    <p class="skills__text">Passionate Web 3.0 Developer with extensive knowledge of solidity
-                        programmming and working of smartcontracts to build a efficient dApps ( Decentralized
-                        Application ) </p>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxl-html5 skills__icon'></i>
-                            <span class="skills__name">HTML5</span>
-                        </div>
-                        <div class="skills__bar skills__html">
-
-                        </div>
-                        <div>
-                            <span class="skills__percentage">95%</span>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxl-css3 skills__icon'></i>
-                            <span class="skills__name">CSS3</span>
-                        </div>
-                        <div class="skills__bar skills__css">
-
-                        </div>
-                        <div>
-                            <span class="skills__percentage">85%</span>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxl-javascript skills__icon' ></i>
-                            <span class="skills__name">JAVASCRIPT</span>
-                        </div>
-                        <div class="skills__bar skills__js">
-
-                        </div>
-                        <div>
-                            <span class="skills__percentage">65%</span>
-                        </div>
-                    </div>
-                    <!-- <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxs-paint skills__icon'></i>
-                            <span class="skills__name">UX/UI</span>
-                        </div>
-                        <div class="skills__bar skills__ux">
-
-                        </div>
-                        <div>
-                            <span class="skills__percentage">85%</span>
-                        </div>
-                    </div> -->
-                </div>
-
-                <div>
-                    <img src="assets/5484597.jpg">
+        <section class="section" id="about">
+            <div class="container reveal">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">
+                    I build AI products where accuracy, scale, and real-world reliability matter.
+                </p>
+                <div class="about__grid">
+                    <article class="panel">
+                        <h3>What I do</h3>
+                        <p>
+                            At Optiex IOT Solutions, I architect AI systems that transform natural language into industrial sensor analytics and actionable insights. I work on model development, orchestration logic, and deployable backend APIs.
+                        </p>
+                    </article>
+                    <article class="panel">
+                        <h3>Highlights</h3>
+                        <ul class="tick-list">
+                            <li>Reduced analysis time by 85% through LLM-driven analytics workflows.</li>
+                            <li>Cut unplanned downtime by 40% with predictive maintenance forecasting.</li>
+                            <li>Built anomaly detection pipelines with ~95% accuracy.</li>
+                            <li>Reduced material simulation workloads from minutes to seconds at Dassault Systèmes.</li>
+                        </ul>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!--===== WORK =====-->
-        <section class="work section" id="work">
-            <h2 class="section-title">Download my Resume</h2>
-            <p style="text-align:center;"><a style="color:white;margin: 0px auto; background-color: blue;padding:10px;border-radius: 5px;font-weight:700;" href="./assets/Nachiket_Resume.pdf">Resume</a></p>
+        <section class="section section--muted" id="experience">
+            <div class="container reveal">
+                <h2 class="section-title">Experience</h2>
+                <div class="timeline">
+                    <article class="timeline__item">
+                        <h3>AI/ML Engineer • Optiex IOT Solutions</h3>
+                        <p class="meta">Aug 2025 - Present • Pune, India</p>
+                        <p>Built end-to-end LLM analytics workflows for high-frequency IoT sensor systems and production intelligence.</p>
+                    </article>
+                    <article class="timeline__item">
+                        <h3>AI/ML Consultant • Freelance</h3>
+                        <p class="meta">Mar 2025 - Aug 2025 • Remote</p>
+                        <p>Developed enterprise RAG chatbot systems with FAISS-based semantic retrieval across 500+ documents.</p>
+                    </article>
+                    <article class="timeline__item">
+                        <h3>Software Engineer (AI/ML) • Dassault Systèmes</h3>
+                        <p class="meta">Feb 2024 - Jan 2025 • Pune, India</p>
+                        <p>Optimized AI-assisted material simulations and reduced compute time from 17-30 minutes to under 3 seconds.</p>
+                    </article>
+                    <article class="timeline__item">
+                        <h3>Machine Learning Engineer • AI4M Technology</h3>
+                        <p class="meta">Aug 2023 - Jan 2024 • Pune, India</p>
+                        <p>Implemented YOLOv7-based quality inspection and monitoring pipelines for manufacturing operations.</p>
+                    </article>
+                </div>
+            </div>
         </section>
 
-        <!--===== CONTACT =====-->
-        <section class="contact section" id="contact">
-            <h2 class="section-title">Contact</h2>
+        <section class="section" id="skills">
+            <div class="container reveal">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills">
+                    <article class="skill-card">
+                        <h3>AI & ML</h3>
+                        <p>LLMs, RAG, Time-Series Forecasting, Anomaly Detection, Computer Vision, PyTorch, TensorFlow</p>
+                    </article>
+                    <article class="skill-card">
+                        <h3>Data & Backend</h3>
+                        <p>Python, FastAPI, Pandas, NumPy, FAISS, API Design, Sensor Analytics</p>
+                    </article>
+                    <article class="skill-card">
+                        <h3>Infra & MLOps</h3>
+                        <p>Docker, Kubernetes, Model Monitoring, Deployment Pipelines, Git, CUDA (learning + applied)</p>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-            <div class="contact__container bd-grid">
-                <form action="" class="contact__form">
-                    <input type="text" placeholder="Name" class="contact__input">
-                    <input type="mail" placeholder="Email" class="contact__input">
-                    <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-                    <input type="button" value="Submit" class="contact__button button">
+        <section class="section section--muted" id="projects">
+            <div class="container reveal">
+                <h2 class="section-title">Featured Work</h2>
+                <div class="projects">
+                    <article class="project-card">
+                        <h3>LLM Industrial Analytics Assistant</h3>
+                        <p>Natural language to sensor analytics pipeline with intent extraction, time-range reasoning, and automated statistical insight generation.</p>
+                    </article>
+                    <article class="project-card">
+                        <h3>Enterprise RAG Knowledge Chatbot</h3>
+                        <p>Context-aware support assistant using advanced chunking, embeddings, FAISS retrieval, and OpenAI LLMs for high relevance responses.</p>
+                    </article>
+                    <article class="project-card">
+                        <h3>GPU-Optimized Simulation Intelligence</h3>
+                        <p>Integrated AI acceleration into industrial simulation workflows, drastically reducing turn-around time for engineering decision-making.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="certifications">
+            <div class="container reveal">
+                <h2 class="section-title">Certifications</h2>
+                <div class="chips">
+                    <span>Learning Kubernetes</span>
+                    <span>Learning Docker</span>
+                    <span>JavaScript Algorithms and Data Structures</span>
+                    <span>E-Commerce Level 1 Participation</span>
+                    <span>Solana Blockchain Development Program</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--muted" id="contact">
+            <div class="container reveal">
+                <h2 class="section-title">Contact</h2>
+                <p class="section-subtitle">Available for AI/ML engineering roles, consulting, and collaboration.</p>
+                <div class="contact-grid">
+                    <a class="contact-card" href="mailto:yawalkarnachiket@gmail.com">
+                        <i class="bx bx-envelope"></i>
+                        <span>yawalkarnachiket@gmail.com</span>
+                    </a>
+                    <a class="contact-card" href="tel:+918446430089">
+                        <i class="bx bx-phone"></i>
+                        <span>+91 84464 30089</span>
+                    </a>
+                    <a class="contact-card" href="https://www.linkedin.com/in/nachiiiket" target="_blank" rel="noopener noreferrer">
+                        <i class="bx bxl-linkedin-square"></i>
+                        <span>LinkedIn Profile</span>
+                    </a>
+                </div>
+                <form class="contact__form" id="contact-form">
+                    <input type="text" id="name" class="contact__input" placeholder="Your name" required>
+                    <input type="email" id="email" class="contact__input" placeholder="Your email" required>
+                    <textarea id="message" rows="6" class="contact__input" placeholder="How can I help?" required></textarea>
+                    <button type="submit" class="button">Send Message</button>
+                    <p id="form-status" class="form-status" aria-live="polite"></p>
                 </form>
             </div>
         </section>
     </main>
 
-    <!--===== FOOTER =====-->
+    <button id="scroll-top" class="scroll-top" aria-label="Scroll to top">
+        <i class="bx bx-up-arrow-alt"></i>
+    </button>
+
     <footer class="footer">
-        <p class="footer__title">NY</p>
-        <div class="footer__social">
-            <a href="https://www.facebook.com/" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
-            <a href="https://instagram.com/nachiket_yawalkar?igshid=YmMyMTA2M2Y="
-                class="footer__icon"><i class='bx bxl-instagram' ></i></a>
-            <a href="https://twitter.com/Nachiiiiket" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
+        <div class="container footer__content">
+            <p class="footer__title">Nachiket Yawalkar</p>
+            <p>AI/ML Engineer • LLM & RAG Systems • Industrial Intelligence</p>
+            <p class="footer__copy">© <span id="year"></span> All rights reserved.</p>
         </div>
-
-
-
     </footer>
 
-    <!-- <div class="plane" style="text-align:center;">
-        <img class="aa" src="assets/foot.jpg" class="center">
-    </div> -->
-
-
-    <!--===== SCROLL REVEAL =====-->
     <script src="https://unpkg.com/scrollreveal"></script>
-
-    <!--===== MAIN JS =====-->
-    <script src="assets/main.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>
