@@ -296,6 +296,12 @@ ul {
   color: var(--primary);
 }
 
+.detail-hint {
+  margin: 0.65rem 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
 .project-list-page {
   display: grid;
   gap: 1rem;
@@ -388,11 +394,18 @@ ul {
   justify-content: center;
 }
 
-.chips span {
+.chips span,
+.chips a {
   padding: 0.6rem 0.9rem;
   border-radius: 999px;
   border: 1px solid var(--border);
   background: var(--surface);
+  display: inline-block;
+}
+
+.chips a:hover {
+  border-color: var(--primary);
+  color: var(--primary);
 }
 
 .page-tabs {
