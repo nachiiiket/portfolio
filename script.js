@@ -132,16 +132,6 @@ if ("IntersectionObserver" in window) {
   revealEls.forEach((el) => el.classList.add("is-visible"));
 }
 
-if (typeof ScrollReveal !== "undefined") {
-  const sr = ScrollReveal({
-    origin: "bottom",
-    distance: "24px",
-    duration: 700,
-    delay: 80
-  });
-  sr.reveal(".section .container > *", { interval: 80 });
-}
-
 function activateTab(targetId) {
   tabButtons.forEach((button) => {
     const isCurrent = button.dataset.tabTarget === targetId;

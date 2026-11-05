@@ -7,24 +7,22 @@
     <title>Nachiket Yawalkar | AI/ML Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="l-header">
         <nav class="nav container">
-            <a href="#home" class="nav__logo">NY</a>
+            <a href="#home" class="nav__logo" aria-label="Nachiket Yawalkar, home">NY</a>
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
-                    <li><a href="#home" class="nav__link active">Home</a></li>
                     <li><a href="#about" class="nav__link">About</a></li>
                     <li><a href="#experience" class="nav__link">Experience</a></li>
-                    <li><a href="#skills" class="nav__link">Skills</a></li>
-                    <li><a href="#pages" class="nav__link">Portfolio Pages</a></li>
                     <li><a href="#live-projects" class="nav__link">Live Projects</a></li>
-                    <li><a href="projects.html" class="nav__link">Projects Page</a></li>
-                    <li><a href="certifications.html" class="nav__link">Certifications Page</a></li>
+                    <li><a href="projects.html" class="nav__link">Projects</a></li>
+                    <li><a href="certifications.html" class="nav__link">Certifications</a></li>
+                    <li><a href="#skills" class="nav__link">Skills</a></li>
                     <li><a href="#contact" class="nav__link">Contact</a></li>
                 </ul>
             </div>
@@ -60,7 +58,6 @@
                     </div>
                 </div>
                 <aside class="home__card reveal">
-                    <div class="avatar">NY</div>
                     <h3>Core Focus</h3>
                     <ul>
                         <li>LLM-powered analytics pipelines</li>
@@ -78,22 +75,19 @@
                 <p class="section-subtitle">
                     I build AI products where accuracy, scale, and real-world reliability matter.
                 </p>
-                <div class="about__grid">
+                <div>
                     <article class="panel">
                         <h3>What I do</h3>
                         <p>
                             At Optiex IOT Solutions, I architect AI systems that transform natural language into industrial sensor analytics and actionable insights. I work on model development, orchestration logic, and deployable backend APIs.
                         </p>
                     </article>
-                    <article class="panel">
-                        <h3>Highlights</h3>
-                        <ul class="tick-list">
-                            <li>Reduced analysis time by 85% through LLM-driven analytics workflows.</li>
-                            <li>Cut unplanned downtime by 40% with predictive maintenance forecasting.</li>
-                            <li>Built anomaly detection pipelines with ~95% accuracy.</li>
-                            <li>Reduced material simulation workloads from minutes to seconds at Dassault Systèmes.</li>
-                        </ul>
-                    </article>
+                </div>
+                <div class="stats">
+                    <div class="stat"><b>85%</b><span>Less analysis time with LLM-driven analytics workflows</span></div>
+                    <div class="stat"><b>40%</b><span>Less unplanned downtime with predictive maintenance forecasting</span></div>
+                    <div class="stat"><b>~95%</b><span>Accuracy in anomaly detection pipelines</span></div>
+                    <div class="stat"><b>&lt;3 s</b><span>Material simulations at Dassault Syst&egrave;mes, down from 17-30 minutes</span></div>
                 </div>
             </div>
         </section>
@@ -126,6 +120,61 @@
             </div>
         </section>
 
+        <section class="section" id="live-projects">
+            <div class="container reveal">
+                <h2 class="section-title">Live Projects</h2>
+                <p class="section-subtitle">Products I build and run.</p>
+                <article class="live-card">
+                    <div>
+                        <span class="live-tag">Live</span>
+                        <h3><a href="job-finder/">Job Finder - Job Application Tracker</a></h3>
+                        <p>Chrome extension that tracks your job applications across LinkedIn and Gmail. See the emails recruiters share in the posts on your screen, email the ones you choose, and keep a record of who you contacted and when.</p>
+                    </div>
+                    <a class="button" href="job-finder/">Live Link</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="section section--muted" id="pages">
+            <div class="container reveal">
+                <h2 class="section-title">Selected Work</h2>
+                <p class="section-subtitle">Projects and certifications. Open any one for the details.</p>
+                <div class="page-tabs" role="tablist" aria-label="Portfolio Pages">
+                    <button class="tab-btn active" data-tab-target="projects-page" role="tab" aria-selected="true">Projects</button>
+                    <button class="tab-btn" data-tab-target="certifications-page" role="tab" aria-selected="false">Certifications</button>
+                </div>
+
+                <div id="projects-page" class="tab-panel active" role="tabpanel">
+                    <div class="projects">
+                        <article class="project-card">
+                            <h3><a href="projects.html#erp-ai-analytics">ERP AI Analytics</a></h3>
+                            <p>AI-powered sales intelligence chatbot analyzing ERP data with LLM agent tool-calling. Built with Django, NVIDIA Nemotron, and DRF.</p>
+                        </article>
+                        <article class="project-card">
+                            <h3><a href="projects.html#enterprise-rag-chatbot">Enterprise RAG Knowledge Chatbot</a></h3>
+                            <p>Context-aware support assistant using hybrid search (semantic similarity + BM25), FAISS retrieval, and OpenAI LLMs. Client project - demo not available.</p>
+                        </article>
+                        <article class="project-card">
+                            <h3><a href="projects.html#tradebook">TradeBook</a></h3>
+                            <p>Trade-keeping software for tracking entry/exit points, P&L, and trade patterns with detailed analytics.</p>
+                        </article>
+                    </div>
+                </div>
+
+                <div id="certifications-page" class="tab-panel" role="tabpanel">
+                    <p class="section-subtitle">Open any certification for the details.</p>
+                    <div class="chips">
+                        <a href="certifications.html#learning-kubernetes">Learning Kubernetes</a>
+                        <a href="certifications.html#learning-docker">Learning Docker</a>
+                        <a href="certifications.html#js-algorithms-data-structures">JavaScript Algorithms and Data Structures</a>
+                        <a href="certifications.html#ecommerce-level-1">E-Commerce Level 1 Participation</a>
+                        <a href="certifications.html#solana-blockchain-program">Solana Blockchain Development Program</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
         <section class="section" id="skills">
             <div class="container reveal">
                 <h2 class="section-title">Technical Skills</h2>
@@ -141,65 +190,6 @@
                     <article class="skill-card">
                         <h3>Infra & MLOps</h3>
                         <p>Docker, Kubernetes, Model Monitoring, Deployment Pipelines, Git, CUDA (learning + applied)</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="section section--muted" id="pages">
-            <div class="container reveal">
-                <h2 class="section-title">Portfolio Pages</h2>
-                <p class="section-subtitle">Switch between sections like separate pages without leaving this website.</p>
-                <div class="page-tabs" role="tablist" aria-label="Portfolio Pages">
-                    <button class="tab-btn active" data-tab-target="projects-page" role="tab" aria-selected="true">Projects</button>
-                    <button class="tab-btn" data-tab-target="certifications-page" role="tab" aria-selected="false">Certifications</button>
-                </div>
-
-                <div id="projects-page" class="tab-panel active" role="tabpanel">
-                    <div class="projects">
-                        <article class="project-card">
-                            <h3><a href="projects.html#erp-ai-analytics">ERP AI Analytics</a></h3>
-                            <p>AI-powered sales intelligence chatbot analyzing ERP data with LLM agent tool-calling. Built with Django, NVIDIA Nemotron, and DRF.</p>
-                            <p class="detail-hint">Click project name for more details.</p>
-                        </article>
-                        <article class="project-card">
-                            <h3><a href="projects.html#enterprise-rag-chatbot">Enterprise RAG Knowledge Chatbot</a></h3>
-                            <p>Context-aware support assistant using hybrid search (semantic similarity + BM25), FAISS retrieval, and OpenAI LLMs. Client project - demo not available.</p>
-                            <p class="detail-hint">Click project name for more details.</p>
-                        </article>
-                        <article class="project-card">
-                            <h3><a href="projects.html#tradebook">TradeBook</a></h3>
-                            <p>Trade-keeping software for tracking entry/exit points, P&L, and trade patterns with detailed analytics.</p>
-                            <p class="detail-hint">Click project name for more details.</p>
-                        </article>
-                    </div>
-                </div>
-
-                <div id="certifications-page" class="tab-panel" role="tabpanel">
-                    <p class="section-subtitle">Click any certification chip for more details and certificate screenshots.</p>
-                    <div class="chips">
-                        <a href="certifications.html#learning-kubernetes">Learning Kubernetes</a>
-                        <a href="certifications.html#learning-docker">Learning Docker</a>
-                        <a href="certifications.html#js-algorithms-data-structures">JavaScript Algorithms and Data Structures</a>
-                        <a href="certifications.html#ecommerce-level-1">E-Commerce Level 1 Participation</a>
-                        <a href="certifications.html#solana-blockchain-program">Solana Blockchain Development Program</a>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section class="section" id="live-projects">
-            <div class="container">
-                <h2 class="section-title">Live Projects</h2>
-                <p class="section-subtitle">Products you can use today.</p>
-                <div class="projects">
-                    <article class="project-card">
-                        <h3><a href="job-finder/">Job Finder - Job Application Tracker</a></h3>
-                        <p>Chrome extension that tracks your job applications across LinkedIn and Gmail. See the emails recruiters share in the posts on your screen, email the ones you choose, and keep a record of who you contacted and when.</p>
-                        <div class="project-links">
-                            <a class="button" href="job-finder/">Live Link</a>
-                        </div>
                     </article>
                 </div>
             </div>
@@ -224,9 +214,9 @@
                     </a>
                 </div>
                 <form class="contact__form" id="contact-form">
-                    <input type="text" id="name" class="contact__input" placeholder="Your name" required>
-                    <input type="email" id="email" class="contact__input" placeholder="Your email" required>
-                    <textarea id="message" rows="6" class="contact__input" placeholder="How can I help?" required></textarea>
+                    <input type="text" id="name" class="contact__input" placeholder="Your name" aria-label="Your name" required>
+                    <input type="email" id="email" class="contact__input" placeholder="Your email" aria-label="Your email" required>
+                    <textarea id="message" rows="6" class="contact__input" placeholder="How can I help?" aria-label="How can I help?" required></textarea>
                     <button type="submit" class="button">Send Message</button>
                     <p id="form-status" class="form-status" aria-live="polite"></p>
                 </form>
@@ -246,7 +236,6 @@
         </div>
     </footer>
 
-    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="script.js"></script>
 </body>
 </html>
