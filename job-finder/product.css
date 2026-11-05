@@ -163,14 +163,20 @@ section { padding: 56px 0; }
 .alt .card, .alt .steps li { background: var(--bg); }
 .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 14px; margin-top: 26px; }
 
-.plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 14px; margin-top: 26px; }
-.plan { display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
-.plan.pop { border: 2px solid var(--brand); }
-.plan .d { color: var(--text-2); font-size: .94rem; }
-.plan .price { margin: 12px 0; font: 700 2rem var(--display); }
-.plan .price small { font: 500 .95rem Inter, system-ui, sans-serif; color: var(--text-2); }
-.plan ul { margin: 0; padding: 0 0 0 18px; color: var(--text-2); font-size: .94rem; }
-.plan li { margin-bottom: 5px; }
+.compare-wrap { margin-top: 26px; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--bg); }
+.compare { width: 100%; border-collapse: collapse; font-size: .95rem; }
+.compare th, .compare td { padding: 13px 16px; text-align: left; border-top: 1px solid var(--line); vertical-align: top; }
+.compare thead th { border-top: 0; font: 700 1.15rem var(--display); }
+.compare thead th.pro { color: var(--brand); }
+.compare .p { display: block; margin-top: 4px; font-size: 1.6rem; color: var(--text); }
+.compare .p small { font: 500 .88rem Inter, system-ui, sans-serif; color: var(--text-2); }
+.compare tbody th { font-weight: 500; }
+.row-note { display: block; font-size: .85rem; font-weight: 400; color: var(--text-2); }
+.compare td { color: var(--text-2); }
+.compare td.yes { color: var(--text); font-weight: 600; }
+.compare td.no { color: var(--text-2); opacity: .75; }
+.vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+@media (max-width: 560px) { .compare { font-size: .86rem; } .compare th, .compare td { padding: 10px; } .compare .p { font-size: 1.25rem; } }
 .fine { margin-top: 14px; font-size: .9rem; color: var(--text-2); }
 
 /* legal pages */

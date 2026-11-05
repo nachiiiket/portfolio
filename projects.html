@@ -22,6 +22,7 @@
                     <li><a href="index.html#experience" class="nav__link">Experience</a></li>
                     <li><a href="index.html#skills" class="nav__link">Skills</a></li>
                     <li><a href="projects.html" class="nav__link active">Projects Page</a></li>
+                    <li><a href="#live-projects" class="nav__link">Live Projects</a></li>
                     <li><a href="certifications.html" class="nav__link">Certifications Page</a></li>
                     <li><a href="index.html#contact" class="nav__link">Contact</a></li>
                 </ul>
@@ -43,6 +44,29 @@
                 <h1 class="section-title">Projects</h1>
                 <p class="section-subtitle">Detailed project showcase with stack, screenshots, and repository/live links.</p>
 
+                <h2 class="section-title" id="live-projects" style="margin-top:2.5rem">Live Projects</h2>
+                <div class="project-list-page">
+                    <article class="project-entry" id="linkedin-job-finder-extension">
+                        <h2>Job Finder - Job Application Tracker</h2>
+                        <p>
+                            A job application tracker for Chrome. It lists the emails recruiters share in the LinkedIn posts on your screen, lets you email the ones you choose from your own Gmail, and tracks who you contacted and when, with CSV and Excel export.
+                        </p>
+                        <div class="stack-chips">
+                            <span>Chrome Extension</span>
+                            <span>Manifest V3</span>
+                            <span>Vanilla JS</span>
+                            <span>Service Worker</span>
+                            <span>Content Script</span>
+                            <span>chrome.storage</span>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="project-links">
+                            <a class="button" href="job-finder/">Live Link</a>
+                        </div>
+                    </article>
+                </div>
+
+                <h2 class="section-title" style="margin-top:3rem">Other Projects</h2>
                 <div class="project-list-page">
                     <article class="project-entry" id="erp-ai-analytics">
                         <h2>ERP AI Analytics</h2>
@@ -72,12 +96,14 @@
                     <article class="project-entry" id="enterprise-rag-chatbot">
                         <h2>Enterprise RAG Knowledge Chatbot</h2>
                         <p>
-                            Document-grounded chatbot with semantic retrieval across 500+ files, designed for customer support and navigation of internal knowledge.
+                            Document-grounded chatbot with hybrid search (semantic similarity + BM25 keyword search) across 500+ files, designed for customer support and navigation of internal knowledge. Built for a client - demo not available.
                         </p>
                         <div class="stack-chips">
                             <span>LangChain</span>
                             <span>OpenAI</span>
                             <span>FAISS</span>
+                            <span>BM25</span>
+                            <span>Hybrid Search</span>
                             <span>Docker</span>
                             <span>Kubernetes</span>
                         </div>
@@ -86,51 +112,7 @@
                         </div>
                         <div class="project-links">
                             <a class="button button--ghost" href="https://github.com/nachiiiket" target="_blank" rel="noopener noreferrer">GitHub</a>
-                            <a class="button button--ghost" href="#" aria-disabled="true">Live Link (Add when deployed)</a>
-                        </div>
-                    </article>
-
-                    <article class="project-entry" id="linkedin-job-finder">
-                        <h2>LinkedIn Job Finder - CLI Bot</h2>
-                        <p>
-                            Automated Python bot that scrapes LinkedIn for AI/ML job opportunities from both the Jobs search page and feed posts. Extracts poster profile, company, email, tracks everything in a CSV with deduplication, optionally auto-applies to Easy Apply jobs, sends connection requests to hiring managers, and exports to styled Excel.
-                        </p>
-                        <div class="stack-chips">
-                            <span>Python</span>
-                            <span>Playwright</span>
-                            <span>Pandas</span>
-                            <span>aiohttp</span>
-                            <span>Hunter.io</span>
-                            <span>OpenPyXL</span>
-                            <span>Rich CLI</span>
-                        </div>
-                        <div class="project-shot">
-                            Screenshot placeholder - Replace with CLI output screenshot.
-                        </div>
-                        <div class="project-links">
-                            <a class="button button--ghost" href="https://github.com/nachiiiket/linkedin_job_finder" target="_blank" rel="noopener noreferrer">GitHub</a>
-                        </div>
-                    </article>
-
-                    <article class="project-entry" id="linkedin-job-finder-extension">
-                        <h2>LinkedIn Job Finder - Chrome Extension</h2>
-                        <p>
-                            A Manifest V3 Chrome extension that automates LinkedIn job searching across multiple roles and locations, scrapes hiring posts with obfuscated email detection, and exports structured data - all with zero external dependencies. Features multi-query job search, hiring post scraping with keyword matching, and smart duplicate detection.
-                        </p>
-                        <div class="stack-chips">
-                            <span>Chrome Extension</span>
-                            <span>Manifest V3</span>
-                            <span>Vanilla JS</span>
-                            <span>Service Worker</span>
-                            <span>Content Script</span>
-                            <span>chrome.storage</span>
-                            <span>CSS3</span>
-                        </div>
-                        <div class="project-shot">
-                            Screenshot placeholder - Replace with extension popup or dashboard screenshot.
-                        </div>
-                        <div class="project-links">
-                            <a class="button button--ghost" href="https://github.com/nachiiiket/linkedin_job_search_chrome_extension" target="_blank" rel="noopener noreferrer">GitHub</a>
+                            <a class="button button--ghost" href="#" aria-disabled="true">Live Link - Not Available (Client Project)</a>
                         </div>
                     </article>
 

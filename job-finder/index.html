@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Job Finder | Job application tracker for LinkedIn and Gmail</title>
-  <meta name="description" content="Job Finder is a Chrome extension and job application tracker. See the emails recruiters share in LinkedIn posts, choose who to contact, email them from your own Gmail, and track every application.">
+  <meta name="description" content="Job Finder is a job application tracker for Chrome. Track every application and who you contacted, see emails recruiters share in LinkedIn posts, and email the ones you choose from your own Gmail.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -31,7 +31,7 @@
 <main id="main">
   <div class="hero wrap">
     <h1>Your job application tracker for LinkedIn and Gmail</h1>
-    <p class="lead">Job Finder is a Chrome extension for job seekers. It lists the emails recruiters have shared in the LinkedIn posts on your screen. You choose who to contact, email them from your own Gmail, and keep track of every application in one place.</p>
+    <p class="lead">Job Finder is a Chrome extension that keeps your job search in one place. Track every application, who you contacted and when. As you browse LinkedIn, it lists the emails recruiters have shared in the posts on your screen, and you choose who to email from your own Gmail.</p>
     <div class="cta">
       <a class="btn btn-primary" href="#demo">Watch how it works</a>
       <a class="btn" href="#pricing">See pricing</a>
@@ -104,7 +104,7 @@
       <p class="intro">The same steps the built-in tutorial walks you through the first time you open the panel.</p>
       <ol class="steps">
         <li><h3>Set up your search</h3><p>Add your job roles, locations and email template in the dashboard, and upload your resume if you want it attached.</p></li>
-        <li><h3>Open a suggested search</h3><p>The panel on LinkedIn suggests searches from your roles. Press Search to open one, or Next query to move on. A progress bar shows how far through them you are.</p></li>
+        <li><h3>Search a suggested keyword</h3><p>The panel suggests keywords to search, based on your roles, so you can find relevant posts on LinkedIn. Press Search to open one, or Next query to move on. A progress bar shows how far through them you are.</p></li>
         <li><h3>Scroll, and emails appear</h3><p>Scroll LinkedIn as you normally would. When a post on your screen includes an email, its author and address appear in the panel.</p></li>
         <li><h3>Hide what you don't want</h3><p>Hide free domains like gmail, so posts from people who are open to work don't fill your list. Hide posts containing words you pick, like unpaid. Pro feature.</p></li>
         <li><h3>Read the post</h3><p>Click a name to jump to that post. Read it and decide. If you already contacted that person, the panel shows the date.</p></li>
@@ -130,45 +130,30 @@
   <section id="pricing" class="alt">
     <div class="wrap">
       <h2>Pricing</h2>
-      <p class="intro">Start free. Paid plans are monthly subscriptions in US dollars, and you can cancel any time.</p>
-      <div class="plans">
-        <div class="plan">
-          <h3>Free</h3><p class="d">Job application tracker</p>
-          <p class="price">$0</p>
-          <ul>
-            <li>20 searches / day</li>
-            <li>200 emails / week</li>
-            <li>5 results per search in the LinkedIn panel</li>
-            <li>5 auto composes / day (drafts)</li>
-            <li>50 drafts / day, 5s cooldown</li>
-            <li>No analytics</li>
-          </ul>
-        </div>
-        <div class="plan pop">
-          <h3>Pro</h3><p class="d">Gmail application tracker for jobs</p>
-          <p class="price">$4.99 <small>/ month</small></p>
-          <ul>
-            <li>500 searches / day, unlimited emails</li>
-            <li>All results in the LinkedIn panel + Select all</li>
-            <li>Unlimited auto compose + manual send</li>
-            <li>Unlimited drafts, no cooldown</li>
-            <li>Hide email domains and post words</li>
-            <li>Dead-query disable &amp; auto-disable</li>
-            <li>Queries &amp; funnel analytics</li>
-          </ul>
-        </div>
-        <div class="plan">
-          <h3>Max</h3><p class="d">Job tracker with full insights</p>
-          <p class="price">$9.99 <small>/ month</small></p>
-          <ul>
-            <li>1,500 searches / day, unlimited emails</li>
-            <li>Everything in Pro</li>
-            <li>Full analytics + timing &amp; hiring words</li>
-            <li>Query performance feedback loop</li>
-          </ul>
-        </div>
+      <p class="intro">Start with Free. Upgrade to Pro when your job search needs more. Pro is billed monthly in US dollars, and you can cancel any time.</p>
+      <div class="compare-wrap">
+        <table class="compare">
+          <thead>
+            <tr>
+              <th scope="col"><span class="vh">Feature</span></th>
+              <th scope="col">Free<span class="p">$0</span></th>
+              <th scope="col" class="pro">Pro<span class="p">$14.99 <small>/ month</small></span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Track the emails you've sent</th><td>Last 250 emails</td><td class="yes">Full history</td></tr>
+            <tr><th scope="row">Suggested searches<span class="row-note">Keywords to search, so you can find relevant posts on LinkedIn</span></th><td>10 per day</td><td class="yes">Higher daily limit</td></tr>
+            <tr><th scope="row">Recruiter emails listed in the panel</th><td>Limited</td><td class="yes">All</td></tr>
+            <tr><th scope="row">Draft emails in Gmail</th><td>Limited</td><td class="yes">Unlimited</td></tr>
+            <tr><th scope="row">Send emails from Gmail</th><td class="no">Not included</td><td class="yes">Included</td></tr>
+            <tr><th scope="row">Select all</th><td class="no">Not included</td><td class="yes">Included</td></tr>
+            <tr><th scope="row">Email domain filter</th><td class="no">Not included</td><td class="yes">Included</td></tr>
+            <tr><th scope="row">Word filter</th><td class="no">Not included</td><td class="yes">Included</td></tr>
+            <tr><th scope="row">Analytics</th><td class="no">Not included</td><td class="yes">Included</td></tr>
+          </tbody>
+        </table>
       </div>
-      <p class="fine">Delivered digitally: after purchase you receive a license key by email and activate it in the extension. Payments are non-refundable, so try the Free plan first. See the <a href="refund.html">refund and cancellation policy</a>.</p>
+      <p class="fine">Delivered digitally: after purchase you receive a license key by email and activate it in the extension. Taxes may be added at checkout. See the <a href="refund.html">refund and cancellation policy</a>.</p>
     </div>
   </section>
 
@@ -202,7 +187,7 @@
       <a href="refund.html">Refund &amp; Cancellation</a>
       <a href="index.html#contact">Contact</a>
     </nav>
-    <p class="disc">Job Finder is an independent product. It is not affiliated with, endorsed by or sponsored by LinkedIn or Google. LinkedIn and Gmail are trademarks of their owners.</p>
+    <p class="disc">Job Finder is an independent product. It is not affiliated with, endorsed by or sponsored by LinkedIn or Google. LinkedIn and Gmail are trademarks of their owners. Orders are processed by Dodo Payments, our Merchant of Record and reseller, which handles payment, taxes and refunds.</p>
   </div>
 </footer>
 <script src="demo.js"></script>

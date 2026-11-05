@@ -116,8 +116,8 @@
   }
 
   const STEPS = [
-    { title: "Open a suggested search", label: "Search",
-      text: "Your roles become suggested searches. Press Search to open the first one. The bar counts how far through them you are.",
+    { title: "Search a suggested keyword", label: "Search",
+      text: "Job Finder suggests keywords to search, based on your roles, so you can find relevant posts on LinkedIn. Press Search to open the first one.",
       async do(a) {
         await a.click($("sSearchBtn"));
         $("sAddr").textContent = "linkedin.com/search/results/content";
