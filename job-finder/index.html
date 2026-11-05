@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Job Finder | Job application tracker for LinkedIn and Gmail</title>
+  <meta name="description" content="Job Finder is a Chrome extension and job application tracker. See the emails recruiters share in LinkedIn posts, choose who to contact, email them from your own Gmail, and track every application.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="product.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#17694e"/><path d="M9 16.5l4.5 4.5L23 11" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Job Finder
+    </a>
+    <nav aria-label="Main">
+      <a href="#demo">Demo</a>
+      <a href="#how">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+      <a class="keep" href="#get">Get it</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="hero wrap">
+    <h1>Your job application tracker for LinkedIn and Gmail</h1>
+    <p class="lead">Job Finder is a Chrome extension for job seekers. It lists the emails recruiters have shared in the LinkedIn posts on your screen. You choose who to contact, email them from your own Gmail, and keep track of every application in one place.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#demo">Watch how it works</a>
+      <a class="btn" href="#pricing">See pricing</a>
+    </div>
+  </div>
+
+  <section id="demo" style="padding-top:20px">
+    <div class="wrap">
+      <h2>See it work</h2>
+      <p class="intro">An animated walkthrough of the extension, from search to tracked application.</p>
+      <div class="demo-frame" id="demoFrame">
+        <div class="stage" id="stage" role="img" aria-label="Animated demonstration of the Job Finder panel beside a LinkedIn page, Gmail compose and the dashboard. The caption below describes each step.">
+          <div class="s-bar"><div class="s-dots"><i></i><i></i><i></i></div><div class="s-addr" id="sAddr"></div></div>
+
+          <div class="s-view" id="vLinked">
+            <div class="s-nav"><div class="s-search" id="sSearch">Search</div></div>
+            <div class="s-feedbox"><div class="s-feed" id="sFeed"></div></div>
+            <aside class="s-panel" id="sPanel" style="top:48px">
+              <div class="s-phead"><span class="t">Job Finder</span><span class="s-count" id="sCount">0</span></div>
+              <div class="s-sec">
+                <div class="s-lbl"><span>Suggested search</span><span id="sQ">0 of 14 searched</span></div>
+                <div class="s-bar-p"><i id="sQBar"></i></div>
+                <div class="s-in">Data Engineer @ Pune</div>
+                <div class="s-row"><div class="s-btn pri" id="sSearchBtn">Search</div><div class="s-btn">Next query</div></div>
+              </div>
+              <div class="s-sec">
+                <div class="s-lbl">Hide email domains</div>
+                <div class="s-in ph" id="sDomains">gmail, yahoo, proton</div>
+              </div>
+              <div class="s-list" id="sList"></div>
+            </aside>
+            <div class="s-gm" id="sGm">
+              <div class="s-gm-h">New Message</div>
+              <div class="s-gm-f"><em>To</em><span id="gmTo"></span></div>
+              <div class="s-gm-f"><em>Subject</em><span id="gmSub"></span></div>
+              <div class="s-gm-b" id="gmBody"></div>
+              <div class="s-gm-a" id="gmAtt"></div>
+              <div class="s-gm-s" id="gmSend">Send</div>
+            </div>
+          </div>
+
+          <div class="s-view" id="vDash" hidden>
+            <div class="s-dash">
+              <div class="s-side"><b>Job Finder</b><small>Job application tracker</small><div class="on">Results</div><div>Analytics</div><div>Setup</div></div>
+              <div class="s-main">
+                <h4>Results</h4><p>Every job post you saved, and who you've contacted.</p>
+                <table class="s-table">
+                  <thead><tr><th>Email</th><th>Post</th><th>Author</th><th>Saved</th><th>Sent on</th><th>Status</th></tr></thead>
+                  <tbody id="sRows"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <svg class="s-cur" id="sCur" viewBox="0 0 20 24" aria-hidden="true"><path d="M2 1l15 13-7 .6 4 8-3 1.4-4-8.2L2 21z" fill="#111" stroke="#fff" stroke-width="1.4"/></svg>
+        </div>
+      </div>
+      <p class="demo-note">Animated demonstration of the product. All names and email addresses are made up.</p>
+      <div class="demo-controls">
+        <div class="demo-caption" aria-live="polite"><b id="capT"></b><span id="capB"></span></div>
+        <button class="btn" id="demoToggle" type="button">Pause</button>
+        <ol class="demo-steps" id="demoSteps" aria-label="Demo steps"></ol>
+      </div>
+    </div>
+  </section>
+
+  <section id="how" class="alt">
+    <div class="wrap">
+      <h2>How it works</h2>
+      <p class="intro">The same steps the built-in tutorial walks you through the first time you open the panel.</p>
+      <ol class="steps">
+        <li><h3>Set up your search</h3><p>Add your job roles, locations and email template in the dashboard, and upload your resume if you want it attached.</p></li>
+        <li><h3>Open a suggested search</h3><p>The panel on LinkedIn suggests searches from your roles. Press Search to open one, or Next query to move on. A progress bar shows how far through them you are.</p></li>
+        <li><h3>Scroll, and emails appear</h3><p>Scroll LinkedIn as you normally would. When a post on your screen includes an email, its author and address appear in the panel.</p></li>
+        <li><h3>Hide what you don't want</h3><p>Hide free domains like gmail, so posts from people who are open to work don't fill your list. Hide posts containing words you pick, like unpaid. Pro feature.</p></li>
+        <li><h3>Read the post</h3><p>Click a name to jump to that post. Read it and decide. If you already contacted that person, the panel shows the date.</p></li>
+        <li><h3>Send or save</h3><p>Use the buttons on the post: Send email or Draft opens Gmail with your template, and Save &amp; track adds it to your dashboard. Nothing goes out unless you choose it.</p></li>
+        <li><h3>Track every application</h3><p>The dashboard keeps the author, their profile, the post link and the date you sent your email. Export it to CSV or Excel at any time.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>You stay in control</h2>
+      <div class="grid-2">
+        <div class="card"><h3>Runs when you do</h3><p>It doesn't run searches, scroll or browse LinkedIn in the background. It works with the page you have open.</p></div>
+        <div class="card"><h3>You choose every recipient</h3><p>You pick who to contact, one at a time or by ticking several posts. Emails go out from your own Gmail account.</p></div>
+        <div class="card"><h3>Your list stays on your computer</h3><p>Saved posts, templates and your resume are kept in your browser. We don't run a server that collects them. See the <a href="privacy.html">privacy policy</a>.</p></div>
+        <div class="card"><h3>Never email twice</h3><p>It remembers who you already contacted and stops you from emailing the same address again.</p></div>
+      </div>
+      <p class="fine">Use it for personal job applications, not for bulk or unsolicited marketing. You're responsible for following LinkedIn's and Google's terms and anti-spam laws. See the <a href="terms.html">terms</a>.</p>
+    </div>
+  </section>
+
+  <section id="pricing" class="alt">
+    <div class="wrap">
+      <h2>Pricing</h2>
+      <p class="intro">Start free. Paid plans are monthly subscriptions in US dollars, and you can cancel any time.</p>
+      <div class="plans">
+        <div class="plan">
+          <h3>Free</h3><p class="d">Job application tracker</p>
+          <p class="price">$0</p>
+          <ul>
+            <li>20 searches / day</li>
+            <li>200 emails / week</li>
+            <li>5 results per search in the LinkedIn panel</li>
+            <li>5 auto composes / day (drafts)</li>
+            <li>50 drafts / day, 5s cooldown</li>
+            <li>No analytics</li>
+          </ul>
+        </div>
+        <div class="plan pop">
+          <h3>Pro</h3><p class="d">Gmail application tracker for jobs</p>
+          <p class="price">$4.99 <small>/ month</small></p>
+          <ul>
+            <li>500 searches / day, unlimited emails</li>
+            <li>All results in the LinkedIn panel + Select all</li>
+            <li>Unlimited auto compose + manual send</li>
+            <li>Unlimited drafts, no cooldown</li>
+            <li>Hide email domains and post words</li>
+            <li>Dead-query disable &amp; auto-disable</li>
+            <li>Queries &amp; funnel analytics</li>
+          </ul>
+        </div>
+        <div class="plan">
+          <h3>Max</h3><p class="d">Job tracker with full insights</p>
+          <p class="price">$9.99 <small>/ month</small></p>
+          <ul>
+            <li>1,500 searches / day, unlimited emails</li>
+            <li>Everything in Pro</li>
+            <li>Full analytics + timing &amp; hiring words</li>
+            <li>Query performance feedback loop</li>
+          </ul>
+        </div>
+      </div>
+      <p class="fine">Delivered digitally: after purchase you receive a license key by email and activate it in the extension. Payments are non-refundable, so try the Free plan first. See the <a href="refund.html">refund and cancellation policy</a>.</p>
+    </div>
+  </section>
+
+  <section id="get">
+    <div class="wrap">
+      <h2>Get the extension</h2>
+      <p class="intro">Job Finder runs in Google Chrome on desktop.</p>
+      <ol class="steps">
+        <li><h3>Install from the Chrome Web Store</h3><p>Job Finder is available exclusively through the Chrome Web Store. The store link will appear here as soon as the listing is published.</p></li>
+        <li><h3>Add your details</h3><p>Open the dashboard, add your roles and email template, and upload your resume.</p></li>
+        <li><h3>Open LinkedIn</h3><p>The panel appears on the right of the page. Press Tutorial for a guided tour.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="contact" class="alt">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <p class="intro">Questions, support or billing: <a href="mailto:yawalkarnachiket@gmail.com">yawalkarnachiket@gmail.com</a>. We aim to reply within 2 business days.</p>
+      <p class="fine">Job Finder is built and run by <a href="../">Nachiket Yawalkar</a>.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Nachiket Yawalkar</span>
+    <nav aria-label="Legal">
+      <a href="terms.html">Terms of Service</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="refund.html">Refund &amp; Cancellation</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <p class="disc">Job Finder is an independent product. It is not affiliated with, endorsed by or sponsored by LinkedIn or Google. LinkedIn and Gmail are trademarks of their owners.</p>
+  </div>
+</footer>
+<script src="demo.js"></script>
+</body>
+</html>
