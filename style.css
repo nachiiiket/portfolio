@@ -415,6 +415,8 @@ h3 {
 /* project and certification pages */
 .project-list-page {
   display: grid;
+  /* minmax(0, ...) lets a card shrink to the screen; plain auto grows to fit a wide screenshot row */
+  grid-template-columns: minmax(0, 1fr);
   gap: 1rem;
 }
 
@@ -449,13 +451,16 @@ h3 {
   display: flex;
   gap: 0.75rem;
   margin: 1rem 0;
+  padding-bottom: 0.5rem; /* room for the scrollbar */
   overflow-x: auto;
+  overscroll-behavior-x: contain; /* a sideways swipe scrolls the row, not the browser back */
   scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
 }
 
 .app-shots img {
   flex: 0 0 auto;
-  width: 180px;
+  width: min(180px, 42vw);
   height: auto;
   border-radius: 10px;
   scroll-snap-align: start;
@@ -712,15 +717,19 @@ body.enable-reveal .reveal.is-visible {
     background: var(--surface);
     border-left: 1px solid var(--border);
     padding: 1.25rem;
-    transition: transform 0.3s ease;
+    /* hidden with clip-path, not translateX(100%): an off-screen menu widens the page and phones scroll sideways to it */
+    clip-path: inset(0 0 0 100%);
+    visibility: hidden;
+    transition: clip-path 0.3s ease, visibility 0s 0.3s;
     overflow-y: auto;
     z-index: 120;
     pointer-events: none;
-    transform: translateX(100%);
   }
 
   .nav__menu.show {
-    transform: translateX(0);
+    clip-path: inset(0);
+    visibility: visible;
+    transition: clip-path 0.3s ease;
     pointer-events: auto;
   }
 
