@@ -444,6 +444,23 @@ h3 {
   overflow: hidden;
 }
 
+/* Play Store screenshots: one row that scrolls sideways */
+.app-shots {
+  display: flex;
+  gap: 0.75rem;
+  margin: 1rem 0;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.app-shots img {
+  flex: 0 0 auto;
+  width: 180px;
+  height: auto;
+  border-radius: 10px;
+  scroll-snap-align: start;
+}
+
 .stack-chips {
   display: flex;
   flex-wrap: wrap;
